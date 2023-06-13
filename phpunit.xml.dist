@@ -4,7 +4,7 @@
     colors="true"
 >
     <testsuites>
-        <testsuite name="Isaac Coding Standard Tests">
+        <testsuite name="iO Coding Standard Tests">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

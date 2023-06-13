@@ -1,17 +1,14 @@
 {
-    "name": "isaac/php-code-sniffer-standard",
+    "name": "iodigital-com/php-code-sniffer-standard",
     "conflict": {
         "isaac/php-code-sniffer": "*"
     },
-    "description": "ISAAC PHP_CodeSniffer Standard",
-    "authors": [
-        {
-            "name": "ISAAC",
-            "email": "info@isaac.nl",
-            "homepage": "https://www.isaac.nl"
-        }
-    ],
+    "replace": {
+        "isaac/php-code-sniffer-standard": "*"
+    },
+    "description": "iO PHP_CodeSniffer Standard",
     "type": "phpcodesniffer-standard",
+    "version": "29.0.0",
     "license": "MIT",
     "require": {
         "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0",
@@ -28,19 +25,16 @@
     },
     "autoload": {
         "psr-4": {
-            "IsaacCodingStandard\\": "src/"
+            "IODigital\\CodingStandard\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IsaacCodingStandard\\Tests\\": "tests/"
+            "IODigital\\CodingStandard\\Tests\\": "tests/"
         },
         "files": [
             "vendor/squizlabs/php_codesniffer/autoload.php"
         ]
-    },
-    "support": {
-        "issues": "https://github.com/isaaceindhoven/php-code-sniffer-standard"
     },
     "config": {
         "allow-plugins": {

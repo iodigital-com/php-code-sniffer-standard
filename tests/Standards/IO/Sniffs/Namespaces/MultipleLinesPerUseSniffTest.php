@@ -2,15 +2,17 @@
 
 declare(strict_types=1);
 
-namespace IsaacCodingStandard\Tests\Standards\ISAAC\Sniffs\ControlStructures;
+namespace IODigital\CodingStandard\Tests\Standards\IO\Sniffs\Namespaces;
 
-use IsaacCodingStandard\Standards\ISAAC\Sniffs\ControlStructures\DisallowGotoOperatorSniff;
-use IsaacCodingStandard\Tests\BaseTestCase;
+use DateTime;
+use IODigital\CodingStandard\Standards\IO\Sniffs\Namespaces\MultipleLinesPerUseSniff;
+use IODigital\CodingStandard\Tests\BaseTestCase;
 use PHP_CodeSniffer\Exceptions\DeepExitException;
 
+use function implode;
 use function sprintf;
 
-class DisallowGotoOperatorSniffTest extends BaseTestCase
+class MultipleLinesPerUseSniffTest extends BaseTestCase
 {
     /**
      * @return void
@@ -21,7 +23,7 @@ class DisallowGotoOperatorSniffTest extends BaseTestCase
         parent::setUp();
 
         $this->codeSnifferRunner
-            ->setSniff('ISAAC.ControlStructures.DisallowGotoOperator')
+            ->setSniff('iO.Namespaces.MultipleLinesPerUse')
             ->setFolder(sprintf('%s/Assets/', __DIR__));
     }
 
@@ -31,16 +33,16 @@ class DisallowGotoOperatorSniffTest extends BaseTestCase
      */
     public function testSniff(): void
     {
-        $results = $this->codeSnifferRunner->sniff('DisallowGotoOperatorSniff.inc');
+        $results = $this->codeSnifferRunner->sniff('MultipleLinesPerUseSniff.inc');
 
-        self::assertSame(1, $results->getErrorCount());
+        self::assertSame(1, $results->getErrorCount(), implode("\n", $results->getAllErrorMessages()));
         self::assertSame(0, $results->getWarningCount());
 
         $errorMessages = $results->getAllErrorMessages();
         self::assertCount(1, $errorMessages);
 
         foreach ($errorMessages as $errorMessage) {
-            self::assertEquals(DisallowGotoOperatorSniff::ERROR_MESSAGE, $errorMessage);
+            self::assertEquals(sprintf(MultipleLinesPerUseSniff::ERROR_MESSAGE, DateTime::class), $errorMessage);
         }
     }
 }

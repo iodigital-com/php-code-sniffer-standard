@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace IsaacCodingStandard\Tests\Standards\ISAAC\Sniffs\ControlStructures;
+namespace IODigital\CodingStandard\Tests\Standards\IO\Sniffs\ControlStructures;
 
-use IsaacCodingStandard\Standards\ISAAC\Sniffs\ControlStructures\DisallowNullCoalesceOperatorSniff;
-use IsaacCodingStandard\Tests\BaseTestCase;
+use IODigital\CodingStandard\Standards\IO\Sniffs\ControlStructures\DisallowGotoOperatorSniff;
+use IODigital\CodingStandard\Tests\BaseTestCase;
 use PHP_CodeSniffer\Exceptions\DeepExitException;
 
 use function sprintf;
 
-class DisallowNullCoalesceOperatorSniffTest extends BaseTestCase
+class DisallowGotoOperatorSniffTest extends BaseTestCase
 {
     /**
      * @return void
@@ -21,7 +21,7 @@ class DisallowNullCoalesceOperatorSniffTest extends BaseTestCase
         parent::setUp();
 
         $this->codeSnifferRunner
-            ->setSniff('ISAAC.ControlStructures.DisallowNullCoalesceOperator')
+            ->setSniff('iO.ControlStructures.DisallowGotoOperator')
             ->setFolder(sprintf('%s/Assets/', __DIR__));
     }
 
@@ -31,7 +31,7 @@ class DisallowNullCoalesceOperatorSniffTest extends BaseTestCase
      */
     public function testSniff(): void
     {
-        $results = $this->codeSnifferRunner->sniff('DisallowNullCoalesceOperatorSniff.inc');
+        $results = $this->codeSnifferRunner->sniff('DisallowGotoOperatorSniff.inc');
 
         self::assertSame(1, $results->getErrorCount());
         self::assertSame(0, $results->getWarningCount());
@@ -40,7 +40,7 @@ class DisallowNullCoalesceOperatorSniffTest extends BaseTestCase
         self::assertCount(1, $errorMessages);
 
         foreach ($errorMessages as $errorMessage) {
-            self::assertEquals(DisallowNullCoalesceOperatorSniff::ERROR_MESSAGE, $errorMessage);
+            self::assertEquals(DisallowGotoOperatorSniff::ERROR_MESSAGE, $errorMessage);
         }
     }
 }

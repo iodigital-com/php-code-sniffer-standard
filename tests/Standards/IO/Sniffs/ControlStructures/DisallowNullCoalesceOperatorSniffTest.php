@@ -2,17 +2,15 @@
 
 declare(strict_types=1);
 
-namespace IsaacCodingStandard\Tests\Standards\ISAAC\Sniffs\Namespaces;
+namespace IODigital\CodingStandard\Tests\Standards\IO\Sniffs\ControlStructures;
 
-use DateTime;
-use IsaacCodingStandard\Standards\ISAAC\Sniffs\Namespaces\MultipleLinesPerUseSniff;
-use IsaacCodingStandard\Tests\BaseTestCase;
+use IODigital\CodingStandard\Standards\IO\Sniffs\ControlStructures\DisallowNullCoalesceOperatorSniff;
+use IODigital\CodingStandard\Tests\BaseTestCase;
 use PHP_CodeSniffer\Exceptions\DeepExitException;
 
-use function implode;
 use function sprintf;
 
-class MultipleLinesPerUseSniffTest extends BaseTestCase
+class DisallowNullCoalesceOperatorSniffTest extends BaseTestCase
 {
     /**
      * @return void
@@ -23,7 +21,7 @@ class MultipleLinesPerUseSniffTest extends BaseTestCase
         parent::setUp();
 
         $this->codeSnifferRunner
-            ->setSniff('ISAAC.Namespaces.MultipleLinesPerUse')
+            ->setSniff('iO.ControlStructures.DisallowNullCoalesceOperator')
             ->setFolder(sprintf('%s/Assets/', __DIR__));
     }
 
@@ -33,16 +31,16 @@ class MultipleLinesPerUseSniffTest extends BaseTestCase
      */
     public function testSniff(): void
     {
-        $results = $this->codeSnifferRunner->sniff('MultipleLinesPerUseSniff.inc');
+        $results = $this->codeSnifferRunner->sniff('DisallowNullCoalesceOperatorSniff.inc');
 
-        self::assertSame(1, $results->getErrorCount(), implode("\n", $results->getAllErrorMessages()));
+        self::assertSame(1, $results->getErrorCount());
         self::assertSame(0, $results->getWarningCount());
 
         $errorMessages = $results->getAllErrorMessages();
         self::assertCount(1, $errorMessages);
 
         foreach ($errorMessages as $errorMessage) {
-            self::assertEquals(sprintf(MultipleLinesPerUseSniff::ERROR_MESSAGE, DateTime::class), $errorMessage);
+            self::assertEquals(DisallowNullCoalesceOperatorSniff::ERROR_MESSAGE, $errorMessage);
         }
     }
 }

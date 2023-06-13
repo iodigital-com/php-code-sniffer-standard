@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - [40](https://github.com/isaaceindhoven/php-code-sniffer-standard/pull/40): Add the `Generic.Formatting.SpaceAfterNot` rule with spacing 0
 
+### Changed
+- Rename to IODigital namespace and iO ruleset
+
 ## [28.2.0] - 2022-11-04
 ### Added
 - [41](https://github.com/isaaceindhoven/php-code-sniffer-standard/pull/41) Support for PHP 8.2

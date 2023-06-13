@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace IsaacCodingStandard\Standards\ISAAC\Sniffs\Namespaces;
+namespace IODigital\CodingStandard\Standards\IO\Sniffs\Namespaces;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;

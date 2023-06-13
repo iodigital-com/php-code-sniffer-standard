@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace IsaacCodingStandard\Standards\ISAAC\Sniffs\Classes;
+namespace IODigital\CodingStandard\Standards\IO\Sniffs\Classes;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;

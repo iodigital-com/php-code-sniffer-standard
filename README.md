@@ -1,7 +1,7 @@
-ISAAC PHP_CodeSniffer Standard
+iO PHP_CodeSniffer Standard
 ===========
 
-Extending the default [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) with ISAAC rules
+Extending the default [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) with iO rules
 
 **Note**: Adding new phpcs-rules to this package must result in a major version update!
 
@@ -10,27 +10,36 @@ Extending the default [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSni
 Require the package:
 
 ```
-composer require --dev isaac/php-code-sniffer-standard
+composer require --dev iodigital-com/php-code-sniffer-standard
 ```
 
+
 ### Setup
-Create a `phpcs.xml`-file in the root of your project, and include the default ISAAC ruleset:
+Create a `phpcs.xml`-file in the root of your project, and include the default iO ruleset:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="phpcs-isaac">
-    <!-- include root folder of project -->
+<ruleset>
+    <arg name="cache"/>
+
+    <!-- include root folder of project , change to your framework requirements -->
     <file>.</file>
     <!-- exclude paths -->
     <exclude-pattern>./src/Migrations</exclude-pattern>
     <exclude-pattern>./vendor</exclude-pattern>
+    <exclude-pattern>./local-repo</exclude-pattern>
 
-    <!-- include all rules in isaac ruleset -->
-    <rule ref="ISAAC"/>
+    <!-- include all rules in iO ruleset -->
+    <rule ref="iO"/>
+    <rule ref="PSR2"/>
+    <rule ref="YourFramework"/> <!-- include your framework standards -->
 </ruleset>
 ```
 
-Change the name of the ruleset, modify the excluded paths and/or include custom rulesets for your project.
+Modify the excluded paths and/or include custom rulesets for your project.
+
+**Note**: Would be awesome if above would be done for you like https://gitlab.isaac.nl/magento2-module/weprovide-code-checker-magento2-component does
+
 
 #### PHPCompatibility
 
@@ -48,7 +57,7 @@ Look here for more information: https://github.com/PHPCompatibility/PHPCompatibi
 
 ### Usage
 
-Since you now have a `phpcs.xml` file in the root of your project, you can run the default phpcs-command: `vendor/bin/phpcs`.
+Since you now have a `phpcs.xml` file in the root of your project, you can run the default phpcs-command: `vendor/bin/phpcs`. To save yourself some time use GrumPHP or Githooks to trigger the sniffing.
 
 #### Ignoring sniff violations
 

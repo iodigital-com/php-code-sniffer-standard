@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="ISAAC">
-    <description>PHP_CodeSniffer ruleset for development at ISAAC</description>
+<ruleset name="iO">
+    <description>PHP_CodeSniffer ruleset for development at iO</description>
 
     <!-- Arguments -->
     <arg value="sp"/>
@@ -74,8 +74,8 @@
     </rule>
     <rule ref="Generic.PHP.Syntax"/>
 
-    <!-- ISAAC -->
-    <!-- all src/Standards/ISAAC/Sniffs/*/*Sniff.php rules are included automatically -->
+    <!-- iO -->
+    <!-- all src/Standards/IO/Sniffs/*/*Sniff.php rules are included automatically -->
 
     <!-- This block should be ordered alphabetically -->
     <!-- 3rd party -->

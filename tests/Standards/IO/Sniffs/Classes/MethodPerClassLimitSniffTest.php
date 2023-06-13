@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace IsaacCodingStandard\Tests\Standards\ISAAC\Sniffs\Classes;
+namespace IODigital\CodingStandard\Tests\Standards\IO\Sniffs\Classes;
 
-use IsaacCodingStandard\Standards\ISAAC\Sniffs\Classes\MethodPerClassLimitSniff;
-use IsaacCodingStandard\Tests\BaseTestCase;
+use IODigital\CodingStandard\Standards\IO\Sniffs\Classes\MethodPerClassLimitSniff;
+use IODigital\CodingStandard\Tests\BaseTestCase;
 use PHP_CodeSniffer\Exceptions\DeepExitException;
 
 use function sprintf;
@@ -20,7 +20,7 @@ class MethodPerClassLimitSniffTest extends BaseTestCase
     {
         parent::setUp();
         $this->codeSnifferRunner
-            ->setSniff('ISAAC.Classes.MethodPerClassLimit')
+            ->setSniff('iO.Classes.MethodPerClassLimit')
             ->setFolder(sprintf('%s/Assets/', __DIR__));
     }
 

@@ -1,6 +1,6 @@
 {
-  "classification": "library",
-  "jiraKey": "ICOMP",
-  "jiraComponent": "PHP",
-  "jiraSummaryPrefix": "ISAAC PHP_CodeSniffer Standard"
-}
+    "classification": "library",
+    "jiraKey": "ICOMP",
+    "jiraComponent": "PHP",
+    "jiraSummaryPrefix": "iO PHP_CodeSniffer Standard"
+  }

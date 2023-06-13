@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace IsaacCodingStandard\Tests;
+namespace IODigital\CodingStandard\Tests;
 
 use PHP_CodeSniffer\Files\File;
 
