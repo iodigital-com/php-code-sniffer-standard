@@ -37,8 +37,6 @@ Create a `phpcs.xml`-file in the root of your project, and include the default i
 
 Modify the excluded paths and/or include custom rulesets for your project.
 
-**Note**: Would be awesome if above would be done for you like https://gitlab.isaac.nl/magento2-module/weprovide-code-checker-magento2-component does
-
 
 #### PHPCompatibility
 
