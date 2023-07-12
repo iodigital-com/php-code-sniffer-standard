@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="iO">
+<ruleset name="IO">
     <description>PHP_CodeSniffer ruleset for development at iO</description>
 
     <!-- Arguments -->

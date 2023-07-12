@@ -30,8 +30,7 @@ Create a `phpcs.xml`-file in the root of your project, and include the default i
     <exclude-pattern>./local-repo</exclude-pattern>
 
     <!-- include all rules in iO ruleset -->
-    <rule ref="iO"/>
-    <rule ref="PSR2"/>
+    <rule ref="IO"/>
     <rule ref="YourFramework"/> <!-- include your framework standards -->
 </ruleset>
 ```
