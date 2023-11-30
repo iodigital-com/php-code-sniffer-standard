@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Increase minimum version of `slevomat/coding-standard` dependency to 7.1 (fixes #4)
 - Remove `version` property from `composer.json`
+- Add missing PHP 8.2 service to Lando configuration
 
 ## [29.0.1]
 ### Fixed
