@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add support for PHP 8.3
 - Add support for v1 versions of the `dealerdirect/phpcodesniffer-composer-installer` package
 
+### Removed
+- Dropped support for PHP 7.4
+
 ### Fixed
 - Increase minimum version of `slevomat/coding-standard` dependency to 7.1 (fixes #4)
 - Remove `version` property from `composer.json`
