@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Add support for PHP 8.3
+
 ## [29.0.1]
 ### Fixed
 - Change ruleset name to start with a capital
