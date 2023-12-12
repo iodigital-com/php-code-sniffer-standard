@@ -21,9 +21,17 @@ services:
             environment:
                 PHP_IDE_CONFIG: 'serverName=appserver'
                 XDEBUG_TRIGGER: '1'
+    php82:
+        type: 'php:8.2'
+        xdebug: true
+        overrides:
+            environment:
+                PHP_IDE_CONFIG: 'serverName=appserver'
+                XDEBUG_TRIGGER: '1'
 tooling:
     phpunit:
         cmd:
             -   php74: 'vendor/bin/phpunit'
             -   php80: 'vendor/bin/phpunit'
             -   php81: 'vendor/bin/phpunit'
+            -   php82: 'vendor/bin/phpunit'
