@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v29.1.0] - 2023-12-12
 ### Added
 - Add support for PHP 8.3
 - Add support for v1 versions of the `dealerdirect/phpcodesniffer-composer-installer` package
