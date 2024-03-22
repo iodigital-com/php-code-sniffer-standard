@@ -30,7 +30,7 @@ class MultipleLinesPerUseSniff implements Sniff
      */
     public function process(File $phpcsFile, $usePointer)
     {
-        if (UseStatementHelper::isAnonymousFunctionUse($phpcsFile, $usePointer)) {
+        if (!UseStatementHelper::isImportUse($phpcsFile, $usePointer)) {
             return;
         }
 
