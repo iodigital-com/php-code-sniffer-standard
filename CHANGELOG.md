@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add support for `slevomat/coding-standard:^8.15`, replace usages of `UseStatementHelper::isAnonymousFunctionUse` with `UseStatementHelper::!isImportUse`
+
 ## [v29.1.0] - 2023-12-12
 ### Added
 - Add support for PHP 8.3
