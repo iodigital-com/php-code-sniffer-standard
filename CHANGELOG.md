@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v29.2.0] - 2024-03-22
+### Changed
 - Add support for `slevomat/coding-standard:^8.15`, replace usages of `UseStatementHelper::isAnonymousFunctionUse` with `UseStatementHelper::!isImportUse`
 
 ## [v29.1.0] - 2023-12-12
