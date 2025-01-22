@@ -5,7 +5,7 @@
     <rule ref="IO"/>
 
     <config name="php_version" value="80000"/>
-    <config name="testVersion" value="8.0-8.3"/>
+    <config name="testVersion" value="8.0-8.4"/>
 
     <arg name="extensions" value="php"/>
     <arg name="cache"/>
