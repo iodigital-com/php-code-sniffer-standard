@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add support for PHP 8.4
 
+### Removed
+- Dropped support for PHP 8.0
+
 ### Changed
 - Add `catalog-info.yaml`
 
