@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Add `catalog-info.yaml`
+- Remove `.project-inventory.json`
 
 ## [v29.2.0] - 2024-03-22
 ### Changed
