@@ -1,12 +1,5 @@
 name: 'php-code-sniffer-standard'
 services:
-    php80:
-        type: 'php:8.0'
-        xdebug: true
-        overrides:
-            environment:
-                PHP_IDE_CONFIG: 'serverName=appserver'
-                XDEBUG_TRIGGER: '1'
     php81:
         type: 'php:8.1'
         xdebug: true
@@ -39,7 +32,6 @@ services:
 tooling:
     phpunit:
         cmd:
-            -   php80: 'vendor/bin/phpunit'
             -   php81: 'vendor/bin/phpunit'
             -   php82: 'vendor/bin/phpunit'
             -   php83: 'vendor/bin/phpunit'
