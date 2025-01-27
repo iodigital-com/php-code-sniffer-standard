@@ -30,6 +30,18 @@ services:
                 XDEBUG_TRIGGER: '1'
 
 tooling:
+    phpcs:
+        cmd:
+            -   php81: 'vendor/bin/phpcs'
+            -   php82: 'vendor/bin/phpcs'
+            -   php83: 'vendor/bin/phpcs'
+            -   php84: 'vendor/bin/phpcs'
+    phpstan:
+        cmd:
+            -   php81: 'vendor/bin/phpstan'
+            -   php82: 'vendor/bin/phpstan'
+            -   php83: 'vendor/bin/phpstan'
+            -   php84: 'vendor/bin/phpstan'
     phpunit:
         cmd:
             -   php81: 'vendor/bin/phpunit'
