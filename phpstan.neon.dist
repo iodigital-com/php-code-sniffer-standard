@@ -2,6 +2,6 @@ parameters:
     paths:
         - src
         - tests
-    level: max
+    level: 9
     bootstrapFiles:
         - %currentWorkingDirectory%/vendor/squizlabs/php_codesniffer/src/Util/Tokens.php
