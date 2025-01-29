@@ -3,8 +3,15 @@ composer.phar
 /vendor/
 composer.lock
 
+### PHP_CodeSniffer
+/phpcs.xml
+
+### PHPStan
+/phpstan.neon
+
 ### PHPUnit
 /.phpunit.result.cache
+/phpunit.xml
 
 ### general
 .idea/
