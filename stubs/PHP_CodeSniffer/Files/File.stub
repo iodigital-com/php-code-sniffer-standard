@@ -1,0 +1,40 @@
+<?php
+
+namespace PHP_CodeSniffer\Files;
+
+class File
+{
+    /**
+     * @return array<
+     *     int,
+     *     array{
+     *         'type': string,
+     *         'code': int|string,
+     *         'content': string,
+     *         'line': int,
+     *         'column': int,
+     *         'length': int,
+     *         'level': int,
+     *         'attribute_opener'?: int,
+     *         'attribute_closer'?: int,
+     *         'bracket_opener'?: int,
+     *         'bracket_closer'?: int,
+     *         'comment_opener'?: int,
+     *         'comment_closer'?: int,
+     *         'comment_tags'?: array<int, int>,
+     *         'conditions'?: array<int, int>,
+     *         'nested_parenthesis'?: array<int, int>,
+     *         'parenthesis_opener'?: int,
+     *         'parenthesis_closer'?: int,
+     *         'parenthesis_owner'?: int,
+     *         'scope_opener'?: int,
+     *         'scope_closer'?: int,
+     *         'sniffCodes'?: array<string, bool>,
+     *         'sniffCode'?: string,
+     *         'sniffProperty'?: string,
+     *         'sniffPropertyValue'?: string,
+     *     }
+     * >
+     */
+    public function getTokens();
+}

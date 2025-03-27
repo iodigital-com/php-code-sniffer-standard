@@ -11,6 +11,7 @@ use SlevomatCodingStandard\Helpers\ScopeHelper;
 use SlevomatCodingStandard\Helpers\SniffSettingsHelper;
 use SlevomatCodingStandard\Helpers\TokenHelper;
 
+use function array_key_exists;
 use function count;
 use function sprintf;
 
@@ -65,6 +66,9 @@ class PropertyPerClassLimitSniff implements Sniff
     protected function getPropertyPointers(File $phpcsFile, int $classPointer): array
     {
         $classToken = $phpcsFile->getTokens()[$classPointer];
+        if (!array_key_exists('scope_opener', $classToken) || !array_key_exists('scope_closer', $classToken)) {
+            return [];
+        }
         $scopeOpenerPointer = $classToken['scope_opener'];
         $scopeCloserPointer = $classToken['scope_closer'];
         $propertyPointers = [];
