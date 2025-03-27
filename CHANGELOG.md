@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Add `catalog-info.yaml`
 - Remove `.project-inventory.json`
+- Update phpunit from 9 to 10
 
 ## [v29.2.0] - 2024-03-22
 ### Changed
