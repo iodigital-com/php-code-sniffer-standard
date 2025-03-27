@@ -47,7 +47,7 @@ class MethodPerClassLimitSniffTest extends BaseTestCase
     }
 
     /** @return array<array<mixed>> */
-    public function goodDataProvider(): array
+    public static function goodDataProvider(): array
     {
         return [
             ['MethodPerClassLimitGood.inc', ],
@@ -58,7 +58,7 @@ class MethodPerClassLimitSniffTest extends BaseTestCase
     }
 
     /** @return array<array<mixed>> */
-    public function badDataProvider(): array
+    public static function badDataProvider(): array
     {
         return [
             ['MethodPerClassLimitBad.inc', 'class', ],
