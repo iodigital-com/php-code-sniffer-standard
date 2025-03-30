@@ -43,6 +43,7 @@
             "phpstan/extension-installer": true,
             "captainhook/hook-installer": true
         },
+        "optimize-autoloader": true,
         "sort-packages": true
     }
 }
