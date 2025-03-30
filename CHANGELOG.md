@@ -11,13 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add CaptainHook
 
 ### Removed
-- Dropped support for PHP 8.0
+- Drop support for PHP 8.0
 
 ### Changed
 - Add `catalog-info.yaml`
 - Remove `.project-inventory.json`
-- Update phpunit from 9 to 10
-- Update phpstan from 1 to 2
+- Update PHPUnit from 9 to 10
+- Update PHPStan from 1 to 2
 
 ## [v29.2.0] - 2024-03-22
 ### Changed
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add support for v1 versions of the `dealerdirect/phpcodesniffer-composer-installer` package
 
 ### Removed
-- Dropped support for PHP 7.4
+- Drop support for PHP 7.4
 
 ### Fixed
 - Increase minimum version of `slevomat/coding-standard` dependency to 7.1 (fixes #4)
@@ -52,14 +52,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [41](https://github.com/isaaceindhoven/php-code-sniffer-standard/pull/41) Support for PHP 8.2
 
 ### Changed
-- Updated `ramsey/composer-install` to version 2
+- Update `ramsey/composer-install` to version 2
 - [39](https://github.com/isaaceindhoven/php-code-sniffer-standard/pull/39): Change 2022 changelog entries by adding link to respective PR
 
 ### Removed
 - [42](https://github.com/isaaceindhoven/php-code-sniffer-standard/pull/42) Support for PHP 7.3
 
 ## Fixed
-- Fixed tests by turning off the cache in tests
+- Fix tests by turning off the cache in tests
 
 ## [v28.1.0] - 2022-06-22
 ### Added
@@ -133,20 +133,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update squizlabs/php_codesniffer from v3.5 to v3.6
 
 ### Fixed
-- Fixed the test runner by only executing the tested sniff
-- Fixed 'constant not found' PHPStan errors
+- Fix the test runner by only executing the tested sniff
+- Fix 'constant not found' PHPStan errors
 - Resolve phpcs sniff violations in test classes when running phpcs using PHP 7.4 or 8.0
 - Resolve phpcs sniff violations in BaseTestCase class
 - Add .phpunit.result.cache to the .gitignore
-- Resolve phpunit error when using the --filter option
+- Resolve PHPUnit error when using the --filter option
 
 ### Removed
-- Removed object-calisthenics/phpcs-calisthenics-rules
-- Removed explicit reference to ISAAC rules (the rules added by this packages are included automatically)
+- Remove object-calisthenics/phpcs-calisthenics-rules
+- Remove explicit reference to ISAAC rules (the rules added by this packages are included automatically)
 
 ## [v21.0.0] - 2021-03-09
 ### Removed
-- Removed duplicate class constant visibility check (removed  SlevomatCodingStandard.Classes.ClassConstantVisibility in favor of PSR12.Properties.ConstantVisibility which is part of the PSR12 ruleset)
+- Remove duplicate class constant visibility check (removed  SlevomatCodingStandard.Classes.ClassConstantVisibility in favor of PSR12.Properties.ConstantVisibility which is part of the PSR12 ruleset)
 
 ### Added
 - Add sniff to only allow linux line endings.
@@ -158,11 +158,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v19.0.0] - 2020-10-30
 ### Added
-- Added LICENSE.md
+- Add LICENSE.md
 
 ### Changed
-- Changed license to MIT
-- Removed ISAAC company-specific instructions from README
+- Change license to MIT
+- Remove ISAAC company-specific instructions from README
 
 ## [v18.2.0] - 2020-10-13
 ### Changed
@@ -219,7 +219,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v14.0.1] - 2019-12-18
 ### Fixed
-- Fixed wrongly typed sniff names
+- Fix wrongly typed sniff names
 
 ## [v14.0.0] - 2019-12-18
 ### Changed
@@ -230,7 +230,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v13.0.2] - 2019-11-15
 ### Added
-- Included phpstan
+- Include PHPStan
 
 ### Fixed
 - Code now adheres own codestyle
@@ -278,7 +278,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - object-calisthenics/phpcs-calisthenics-rules from dev-dependencies
 
 ## [v7.0.1] - 2019-02-14
-- Tagged new version because the v7.0.0 was placed on the develop branch instead of the master branch.
+- Tag new version because the v7.0.0 was placed on the develop branch instead of the master branch.
 
 ## [v7.0.0] - 2019-02-13
 ### Added
@@ -333,7 +333,7 @@ This enables additional rulesets to be defined on the project level without need
 
 ## [v1.0.1] - 2018-08-22
 ### Added
-- Added changelog
+- Add changelog
 
 ## [v1.0.0] - 2018-08-21
 ### Initial commit
