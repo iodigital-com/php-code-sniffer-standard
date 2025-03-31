@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [v29.3.0](https://github.com/iodigital-com/php-code-sniffer-standard/releases/tag/v29.3.0) - 2025-03-31
+
 ### Added
 - Add support for PHP 8.4
 - Add CaptainHook
