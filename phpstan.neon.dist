@@ -5,3 +5,5 @@ parameters:
     level: max
     bootstrapFiles:
         - %currentWorkingDirectory%/vendor/squizlabs/php_codesniffer/src/Util/Tokens.php
+    stubFiles:
+        - stubs/PHP_CodeSniffer/Files/File.stub

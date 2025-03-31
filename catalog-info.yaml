@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: io-php-code-sniffer-standard
+  title: iO PHP_CodeSniffer Standard
+  description: Provides the "IO" ruleset for PHP_CodeSniffer.
+  namespace: io
+  tags:
+    - php
+  annotations:
+    jira/project-key: ICOMP
+    jira/label: io-php-code-sniffer-standard
+spec:
+  type: library
+  lifecycle: development
+  owner: default/team_chapter_php_eindhoven

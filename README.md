@@ -1,11 +1,9 @@
-iO PHP_CodeSniffer Standard
-===========
+# iO PHP_CodeSniffer Standard
 
 Extending the default [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) with iO rules
 
-**Note**: Adding new phpcs-rules to this package must result in a major version update!
 
-### Installation
+## Installation
 
 Require the package:
 
@@ -14,7 +12,7 @@ composer require --dev iodigital-com/php-code-sniffer-standard
 ```
 
 
-### Setup
+## Setup
 Create a `phpcs.xml`-file in the root of your project, and include the default iO ruleset:
 
 ```
@@ -32,31 +30,22 @@ Create a `phpcs.xml`-file in the root of your project, and include the default i
     <!-- include all rules in iO ruleset -->
     <rule ref="IO"/>
     <rule ref="YourFramework"/> <!-- include your framework standards -->
+    
+    <!-- Configure minimum supported PHP version (used by PHP_CodeSniffer and Slevomat sniffs) -->
+    <config name="php_version" value="80100"/>
+    <!-- Configure PHP version or range of PHP versions (used by PHPCompatibility sniffs) -->
+    <config name="testVersion" value="8.1-8.4"/>
 </ruleset>
 ```
 
-Modify the excluded paths and/or include custom rulesets for your project.
+Modify the excluded paths and PHP versions and optionally include custom rulesets for your project.
 
 
-#### PHPCompatibility
+## Usage
 
-To get the most out of the PHPCompatibility standard, you should specify a testVersion to check against.
-That will enable the checks for both deprecated/removed PHP features as well as the detection of code using new PHP features.
-Include the testVersion by adding a config rule in your `phpcs.xml`. Examples:
+Since you now have a `phpcs.xml` file in the root of your project, you can run the default phpcs command: `vendor/bin/phpcs`.
 
-```
-    <config name="testVersion" value="7.0"/> <!-- check for compatability with php 7.0 -->
-    <config name="testVersion" value="7.1-"/> <!-- check for 7.1 and higher -->
-    <config name="testVersion" value="7.0-7.2"/> <!-- check within range 7.0 to 7.2 -->
-```
-
-Look here for more information: https://github.com/PHPCompatibility/PHPCompatibility#using-a-custom-ruleset
-
-### Usage
-
-Since you now have a `phpcs.xml` file in the root of your project, you can run the default phpcs-command: `vendor/bin/phpcs`. To save yourself some time use GrumPHP or Githooks to trigger the sniffing.
-
-#### Ignoring sniff violations
+### Ignoring sniff violations
 
 Sometimes a violation of a sniff cannot be resolved. In this case, the violation should be ignored using the `phpcs:ignore` and `phpcs:disable` / `phpcs:enable` annotations.
 
@@ -77,7 +66,9 @@ try {
 }
 ```
 
-### Contributing
+## Contributing
 
-If you want to to contribute, create a merge request with **one sniff per merge request**. Please provide
+If you want to contribute, create a merge request with **one sniff per merge request**. Please provide
 an example in the description of what the sniff is about with a good and bad code snippet.
+
+**Note**: Adding new phpcs rules to this package must result in a major version update!
