@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Fix offsetAccess.notFound error ("Offset int|null might not exist") in MultipleLinesPerUse sniff reported by PHPStan 2.1.23 and higher
+
 ## [v29.3.0](https://github.com/iodigital-com/php-code-sniffer-standard/releases/tag/v29.3.0) - 2025-03-31
 
 ### Added
