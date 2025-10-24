@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Changed
+- Update `phpcompatibility/php-compatibility` requirement from `^9.3` to `^10.0.0@dev`
+- Update `squizlabs/php_codesniffer` requirement from `^3.6.0` to `^3.13.3` as required by the updated `phpcompatibility/php-compatibility` dependency
+
 ### Fixed
 - Fix offsetAccess.notFound error ("Offset int|null might not exist") in MultipleLinesPerUse sniff reported by PHPStan 2.1.23 and higher
 
