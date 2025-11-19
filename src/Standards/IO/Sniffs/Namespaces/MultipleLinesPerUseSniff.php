@@ -33,21 +33,19 @@ class MultipleLinesPerUseSniff implements Sniff
         if (!UseStatementHelper::isImportUse($phpcsFile, $usePointer)) {
             return;
         }
-
-        $tokens = $phpcsFile->getTokens();
-
         $semicolonPointer = TokenHelper::findNext($phpcsFile, T_SEMICOLON, $usePointer);
-        $fqn = UseStatementHelper::getFullyQualifiedTypeNameFromUse($phpcsFile, $usePointer);
-
+        if ($semicolonPointer === null) {
+            return;
+        }
+        $tokens = $phpcsFile->getTokens();
         if ($tokens[$usePointer]['line'] === $tokens[$semicolonPointer]['line']) {
             return;
         }
-
         $phpcsFile->addError(
             self::ERROR_MESSAGE,
             $usePointer,
             self::CODE_MULTIPLE_LINES_PER_USE,
-            [$fqn]
+            [UseStatementHelper::getFullyQualifiedTypeNameFromUse($phpcsFile, $usePointer)]
         );
     }
 }

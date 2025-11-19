@@ -34,8 +34,6 @@ class CodeSnifferRunner
      */
     public function __construct()
     {
-        Config::setConfigData('report_format', 'full');
-
         $this->codeSniffer = new Runner();
         $this->codeSniffer->config = new Config();
         $this->codeSniffer->reporter = new Reporter($this->codeSniffer->config);
