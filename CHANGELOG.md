@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Fixed
+- Prevent unattended execution of `composer update` by adding the `composer.lock` file and by changing the dependency in the `composer-install` GitHub Action from `highest` to `locked`
+
 ## [v29.4.0](https://github.com/iodigital-com/php-code-sniffer-standard/releases/tag/v29.4.0) - 2025-11-19
 
 ### Added
