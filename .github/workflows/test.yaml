@@ -20,7 +20,7 @@ jobs:
                     - "8.4"
                 composer-dependency-versions:
                     - "lowest"
-                    - "highest"
+                    - "locked"
 
         steps:
             -   uses: "actions/checkout@v2"
