@@ -33,6 +33,9 @@
         "psr-4": {
             "IODigital\\CodingStandard\\Tests\\": "tests/"
         },
+        "exclude-from-classmap": [
+            "tests/**/Assets/*"
+        ],
         "files": [
             "vendor/squizlabs/php_codesniffer/autoload.php"
         ]
