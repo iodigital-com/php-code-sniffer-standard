@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Add support for PHP 8.5
 
+### Removed
+- Remove support for PHP 8.1
+
 ### Fixed
 - Prevent unattended execution of `composer update` by adding the `composer.lock` file and by changing the dependency in the `composer-install` GitHub Action from `highest` to `locked`
 
