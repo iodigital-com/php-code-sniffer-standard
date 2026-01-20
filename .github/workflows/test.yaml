@@ -7,11 +7,22 @@ on:
             - "main"
     pull_request: ~
 
+permissions:
+    contents: read
+    packages: read
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 jobs:
     test:
-        runs-on: "ubuntu-latest"
+        name: "Test — PHP ${{ matrix.php-version }} / deps: ${{ matrix.composer-dependency-versions }}"
+        runs-on: ubuntu-latest
+        timeout-minutes: 60
 
         strategy:
+            fail-fast: false
             matrix:
                 php-version:
                     - "8.2"
@@ -22,14 +33,28 @@ jobs:
                     - "lowest"
                     - "locked"
 
+        env:
+            COMPOSER_NO_INTERACTION: "1"
+
         steps:
-            -   uses: "actions/checkout@v2"
-            -   uses: "shivammathur/setup-php@v2"
-                with:
-                    php-version: "${{ matrix.php-version }}"
-            -   uses: "ramsey/composer-install@v2"
-                with:
-                    dependency-versions: "${{ matrix.composer-dependency-versions }}"
-            -   run: "vendor/bin/phpcs"
-            -   run: "vendor/bin/phpstan"
-            -   run: "vendor/bin/phpunit"
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-version }}
+
+            - name: Install dependencies (composer)
+              uses: ramsey/composer-install@v3
+              with:
+                  dependency-versions: ${{ matrix.composer-dependency-versions }}
+
+            - name: Run PHP CodeSniffer
+              run: vendor/bin/phpcs
+
+            - name: Run PHPStan
+              run: vendor/bin/phpstan
+
+            - name: Run PHPUnit
+              run: vendor/bin/phpunit
