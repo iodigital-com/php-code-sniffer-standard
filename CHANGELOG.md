@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [v29.5.0](https://github.com/iodigital-com/php-code-sniffer-standard/releases/tag/v29.5.0) - 2026-01-20
+
+### Added
+- Add support for PHP 8.5
+
+### Removed
+- Remove support for PHP 8.1
+
+### Fixed
+- Prevent unattended execution of `composer update` by adding the `composer.lock` file and by changing the dependency in the `composer-install` GitHub Action from `highest` to `locked`
+- Exclude test assets from Composer's autoloader
+
 ## [v29.4.0](https://github.com/iodigital-com/php-code-sniffer-standard/releases/tag/v29.4.0) - 2025-11-19
 
 ### Added

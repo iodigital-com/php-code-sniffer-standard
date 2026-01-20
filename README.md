@@ -34,7 +34,7 @@ Create a `phpcs.xml`-file in the root of your project, and include the default i
     <!-- Configure minimum supported PHP version (used by PHP_CodeSniffer and Slevomat sniffs) -->
     <config name="php_version" value="80100"/>
     <!-- Configure PHP version or range of PHP versions (used by PHPCompatibility sniffs) -->
-    <config name="testVersion" value="8.1-8.4"/>
+    <config name="testVersion" value="8.2-8.5"/>
 </ruleset>
 ```
 

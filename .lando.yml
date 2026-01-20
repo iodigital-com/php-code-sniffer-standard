@@ -1,12 +1,5 @@
 name: 'php-code-sniffer-standard'
 services:
-    php81:
-        type: 'php:8.1'
-        xdebug: true
-        overrides:
-            environment:
-                PHP_IDE_CONFIG: 'serverName=appserver'
-                XDEBUG_TRIGGER: '1'
     php82:
         type: 'php:8.2'
         xdebug: true
@@ -28,23 +21,30 @@ services:
             environment:
                 PHP_IDE_CONFIG: 'serverName=appserver'
                 XDEBUG_TRIGGER: '1'
+    php85:
+        type: 'php:8.5'
+        xdebug: true
+        overrides:
+            environment:
+                PHP_IDE_CONFIG: 'serverName=appserver'
+                XDEBUG_TRIGGER: '1'
 
 tooling:
     phpcs:
         cmd:
-            -   php81: 'vendor/bin/phpcs'
             -   php82: 'vendor/bin/phpcs'
             -   php83: 'vendor/bin/phpcs'
             -   php84: 'vendor/bin/phpcs'
+            -   php85: 'vendor/bin/phpcs'
     phpstan:
         cmd:
-            -   php81: 'vendor/bin/phpstan'
             -   php82: 'vendor/bin/phpstan'
             -   php83: 'vendor/bin/phpstan'
             -   php84: 'vendor/bin/phpstan'
+            -   php85: 'vendor/bin/phpstan'
     phpunit:
         cmd:
-            -   php81: 'vendor/bin/phpunit'
             -   php82: 'vendor/bin/phpunit'
             -   php83: 'vendor/bin/phpunit'
             -   php84: 'vendor/bin/phpunit'
+            -   php85: 'vendor/bin/phpunit'
